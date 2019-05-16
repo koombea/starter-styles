@@ -25,40 +25,38 @@ $headings-letter-spacing:           0;
 $headings-color:                    inherit;
 
 // Grid
-// $use-silent-classes:  true!default;
-$grid-columns: 12 !default; // Set number of columns in the grid
+// $use-silent-classes:  	true!default;
+// $push:					true!default;
+// $pull:					true!default;
 
-$xs-max: 40rem !default; // Set xs breakpoint's max width
-$sm-max: 64rem !default; // Set sm breakpoint's max width
-$md-max: 90rem !default; // Set md breakpoint's max width
-$lg-max: 120rem !default; // Set lg breakpoint's max width
-$bg-max: 160rem !default; // Set big breakpoint's max width
+// Media Queries and grid settings
+$screen-extra-small:              	480px!default;
+$screen-small:                    	620px!default;
+$screen-medium:                   	768px!default;
+$screen-large:                    	1024px!default;
+$screen-extra-large:              	1280px!default;
 
-$gutter: 0.625rem !default; // Set gutter size
-
-$sm-start: ($xs-max + 1); // Generate sm breakpoint's min width
-$md-start: ($sm-max + 1); // Generate md breakpoint's min width
-$lg-start: ($md-max + 1); // Generate lg breakpoint's min width
-$xl-start: ($lg-max + 1); // Generate xl breakpoint's min width
-$bg-start: ($bg-max + 1); // Generate xl breakpoint's min width
+$screen:                          	"only screen";
+$small:                           	"only screen and (min-width: #{$screen-extra-small})";
+$small:                           	"only screen and (min-width: #{$screen-small})";
+$medium:                          	"only screen and (min-width: #{$screen-medium})";
+$large-max:                       	"only screen and (max-width: #{$screen-large - 1})";
+$small-max:                       	"only screen and (max-width: #{$screen-small - 1})";
+$medium-max:                      	"only screen and (max-width: #{$screen-medium - 1})";
+$large:                           	"only screen and (min-width: #{$screen-large})";
+$extra-large:                     	"only screen and (min-width: #{$screen-extra-large})";
+$landscape:                       	"only screen and (orientation: landscape)";
+$portrait:                        	"only screen and (orientation: portrait)";
 
 // Breakpoints
-// Create breakpoint range statements to be used in media queries
-$xsmall-only: "only screen and (max-width: #{$xs-max})"; // 0 -> xs-max range
-$extra-small-max: "only screen and (max-width: #{$xs-max - 1})";
-$small-up: "only screen and (min-width: #{$sm-start})"; // sm-start -> up range
-$small-max: "only screen and (max-width: #{$sm-max - 1})";
-$small-only: "only screen and (min-width: #{$sm-start}) and (max-width: #{$sm-max})"; // sm-start -> sm-max range
-$medium-up: "only screen and (min-width: #{$md-start})"; // md-start -> up range
-$medium-only: "only screen and (min-width: #{$md-start}) and (max-width: #{$md-max})"; // md-start -> md-max range
-$medium-max: "only screen and (max-width: #{$md-max - 1})";
-$large-up: "only screen and (min-width: #{$lg-start})"; // lg-start -> up range
-$large-only: "only screen and (min-width: #{$lg-start}) and (max-width: #{$lg-max})"; // lg-start -> lg-max range
-$xlarge-up: "only screen and (min-width: #{$xl-start})"; // xl-start -> up range
-$big-up: "only screen and (min-width: #{$bg-start})"; // lg-start -> up range
-$big-only: "only screen and (min-width: #{$xl-start}) and (max-width: #{$bg-max})"; // lg-start -> lg-max range
 
-$breakpoints-all: ($xsmall-only, $small-up, $small-max, $small-only, $medium-up, $medium-only, $large-up, $large-only, $xlarge-up);
-$breakpoint-ups: ($small-up, $medium-up, $large-up, $xlarge-up);
-$breakpoint-all-prefixes: ("xsmall", "xsmall-only", "small", "small-max", "small-only", "medium", "medium-only", "large", "large-only", "xlarge");
-$breakpoint-up-prefixes: ("xsmall", "small", "medium", "large", "xlarge");
+$breakpoints: (
+    'large' '(min-width: #{$screen-large})',
+    'medium' '(min-width: #{$screen-medium})',
+    'small' '(min-width: #{$screen-small})',
+    'extra-small' '(min-width: #{$screen-extra-small})'
+)!default;
+
+$breakpoint-has-widths: ('small', 'medium', 'large')!default;
+$breakpoint-has-push:   ('small', 'medium', 'large')!default;
+$breakpoint-has-pull:   ('small', 'medium', 'large')!default;

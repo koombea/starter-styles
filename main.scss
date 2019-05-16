@@ -14,7 +14,6 @@
 @import "mixins/clearfix";
 @import "mixins/em";
 @import "mixins/rem";
-@import "mixins/flexgrid";
 @import "mixins/visibility";
 @import "mixins/tab-focus";
 @import "mixins/opacity";
@@ -24,7 +23,7 @@
 @import "core/fonts";
 @import "core/typography";
 @import "core/layout";
-@import "core/flexgrid";
+@import "core/grid";
 
 //modules, the real css that you write everyday based on the design
 // @import "modules/your-module";

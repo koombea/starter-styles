@@ -27,7 +27,7 @@
 }
 .desk-only {
   display: none;
-  @media #{$medium-up} {
+  @media #{$medium} {
     display: initial;
   }
 }
@@ -46,45 +46,4 @@
   overflow: hidden;
   clip: rect(0,0,0,0);
   border: 0 ;
-}
-
-// Mixin to run inside of for loop - creates visibility classes * Not for developer use *
-
-@for $i from 1 through length($breakpoint-all-prefixes) {
-  $thisPrefix: nth($breakpoint-all-prefixes, $i);
-  @if $thisPrefix == "xsmall" {
-    @include vis-factory($thisPrefix);
-  } @else if $thisPrefix == "xsmall-only" {
-    @media #{$xsmall-only} {
-      @include vis-factory($thisPrefix);
-    }
-  } @else if $thisPrefix == "small" {
-    @media #{$small-up} {
-      @include vis-factory($thisPrefix);
-    }
-  } @else if $thisPrefix == "small-max" {
-    @media #{$small-max} {
-      @include vis-factory($thisPrefix);
-    }
-  } @else if $thisPrefix == "medium" {
-    @media #{$medium-up} {
-      @include vis-factory($thisPrefix);
-    }
-  } @else if $thisPrefix == "medium-only" {
-    @media #{$medium-only} {
-      @include vis-factory($thisPrefix);
-    }
-  } @else if $thisPrefix == "large" {
-    @media #{$large-up} {
-      @include vis-factory($thisPrefix);
-    }
-  } @else if $thisPrefix == "large-only" {
-    @media #{$large-only} {
-      @include vis-factory($thisPrefix);
-    }
-  } @else if $thisPrefix == "xlarge" {
-    @media #{$xlarge-up} {
-      @include vis-factory($thisPrefix);
-    }
-  }
 }
