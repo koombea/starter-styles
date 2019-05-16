@@ -1,0 +1,83 @@
+.vertical-align--middle {
+  vertical-align: middle;
+}
+
+.vertical-align--bottom {
+  vertical-align: bottom;
+}
+
+.vertical-align--top {
+  vertical-align: top;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.align--start {
+  align-self: flex-start;
+}
+.align--end {
+  align-self: flex-end;
+}
+.horizontal-align--center {
+  justify-content: center;
+}
+.justify-content--left {
+  justify-content: left;
+}
+// width helpers
+.full-width {
+  width: 100%;
+}
+
+.full-width--small-only {
+  @media #{$medium-max}{
+    width: 100%;
+  }
+}
+
+// Mute an object by reducing its opacity.
+//===================
+
+.muted{
+  @include opacity(0.5);
+}
+
+.overflow-x {
+  overflow-x: auto;
+}
+
+.overflow-x--hidden {
+  overflow-x: hidden;
+}
+
+.relative{
+  position: relative;
+}
+
+.flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+// Text Helpers
+//===================
+
+// Text alignment
+.text-start {
+  text-align: $start;
+}
+
+.text-end {
+  text-align: $end;
+}
+
+.text-center {
+  text-align: center;
+}

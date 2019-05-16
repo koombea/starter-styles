@@ -1,0 +1,58 @@
+//
+// Typography
+// --------------------------------------------------
+
+
+// Headings
+// -------------------------
+
+$font-size-huge: $font-size-base * 3.65;
+$font-size-alpha: $font-size-base * 3;
+$font-size-beta: $font-size-base * 1.5714;
+$font-size-gamma: $font-size-base * 1.5714;
+$font-size-delta: $font-size-base * 1.5714;
+$font-size-epsilon: $font-size-base * 1.5714;
+$font-size-zeta: $font-size-base * 1.5714;
+
+.huge {
+  font-size: $font-size-huge;
+}
+
+h1, .alpha {
+  font-size: $font-size-alpha;
+  letter-spacing: 0;
+}
+
+h2, .beta {
+  font-size: $font-size-beta;
+  letter-spacing: 0;
+  @include rem(30, 'line-height');
+}
+
+h3, .gamma {
+  font-size: $font-size-gamma;
+  letter-spacing: 0;
+  @include rem(30, 'line-height');
+}
+
+h4, .delta {
+  font-size: $font-size-delta;
+  letter-spacing: 0;
+  @include rem(30, 'line-height');
+}
+
+h5, .epsilon {
+  font-size: $font-size-epsilon;
+  letter-spacing: 0;
+  @include rem(30, 'line-height');
+}
+
+h6, .zeta {
+  font-size: $font-size-zeta;
+  letter-spacing: 0;
+  @include rem(30, 'line-height');
+}
+
+small, .small {
+  font-size: 80%;
+}

@@ -1,0 +1,48 @@
+// Font Helpers
+//===================
+
+// Font weights
+.weight--light        { font-weight: 300; }
+
+.face-regular,
+.regular,
+.weight--normal       { font-weight: 400; }
+
+.face-semi,
+.semibold,
+.weight--semibold     { font-weight: 600; }
+
+.face-bold,
+.bold,
+.weight--bold         { font-weight: 700; }
+
+// Font styles
+.style--normal        { font-style: normal; }
+
+.border--none         { border: 0; }
+
+// refactor // was inside from transparency core helpers
+.word-break {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.underline--none {
+  text-decoration: none !important;
+}
