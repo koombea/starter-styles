@@ -1,8 +1,4 @@
-
-$use-silent-classes:    false !default;
-
 $class-type: if($use-silent-classes, unquote("%"), unquote("."));
-
 
 #{$class-type}flexgrid {
   @include flexgrid();
@@ -40,17 +36,17 @@ $class-type: if($use-silent-classes, unquote("%"), unquote("."));
   }
 }
 
-.flexgrid__item {
+#{$class-type}flexgrid__item {
   @include flexgrid__item();
 }
 
-.flexgrid__item.reverse {
+#{$class-type}flexgrid__item#{$class-type}reverse {
   @include flexgrid__item--reverse();
 }
 
 // Mixin to run inside of for loop - creates col/breakpoint classes * Not for developer use *
 @mixin col-factory($thisPrefix) {
-  .#{$thisPrefix}--col {
+  #{$class-type}#{$thisPrefix}--col {
     box-sizing: border-box;
     flex-grow: 1;
     flex-basis: 0;
@@ -68,40 +64,40 @@ $class-type: if($use-silent-classes, unquote("%"), unquote("."));
       margin-left: 100% / $grid-columns * $i;
     }
   }
-  .flexgrid.#{$thisPrefix}--start {
+  #{$class-type}#{$thisPrefix}--start {
     justify-content: flex-start;
   }
-  .flexgrid.#{$thisPrefix}--center {
+  #{$class-type}#{$thisPrefix}--center {
     justify-content: center;
   }
-  .flexgrid.#{$thisPrefix}--end {
+  #{$class-type}#{$thisPrefix}--end {
     justify-content: flex-end;
   }
-  .flexgrid.#{$thisPrefix}--top {
+  #{$class-type}#{$thisPrefix}--top {
     align-items: flex-start;
   }
-  .flexgrid.#{$thisPrefix}--middle {
+  #{$class-type}#{$thisPrefix}--middle {
     align-items: center;
   }
-  .flexgrid.#{$thisPrefix}--bottom {
+  #{$class-type}#{$thisPrefix}--bottom {
     align-items: flex-end;
   }
-  .flexgrid.#{$thisPrefix}--around {
+  #{$class-type}#{$thisPrefix}--around {
     justify-content: space-around;
   }
-  .flexgrid.#{$thisPrefix}--between {
+  #{$class-type}#{$thisPrefix}--between {
     justify-content: space-between;
   }
-  .flexgrid.#{$thisPrefix}--row-reverse {
+  #{$class-type}#{$thisPrefix}--row-reverse {
     flex-direction: row-reverse;
   }
-  .flexgrid.#{$thisPrefix}--col-reverse {
+  #{$class-type}#{$thisPrefix}--col-reverse {
     flex-direction: column-reverse;
   }
-  .#{$thisPrefix}--first {
+  #{$class-type}#{$thisPrefix}--first {
     order: -1;
   }
-  .#{$thisPrefix}--last {
+  #{$class-type}#{$thisPrefix}--last {
     order: 1;
   }
 } // Mixin to run inside of for loop - creates col/breakpoint classes

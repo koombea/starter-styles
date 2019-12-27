@@ -1,43 +1,54 @@
+$class-type: if($use-silent-classes, unquote("%"), unquote("."));
 // display classes
-.display-none {
+#{$class-type}display-none {
   display: none;
 }
 
-.display-inline {
+#{$class-type}display-inline {
   display: inline;
 }
 
-.display-inline-block {
+#{$class-type}display-inline-block {
   display: inline-block;
 }
 
-.display-block {
+#{$class-type}display-block {
   display: block;
 }
 
-.hidden {
+#{$class-type}hidden {
   display: none;
 }
 
-.small-only {
+#{$class-type}small-only {
   display: none;
   @media #{$small-max} {
     display: inherit;
   }
+  &#{$class-type}flexbox {
+    @media #{$small-max} {
+      display: flex;
+    }
+  }
 }
-.desk-only {
+#{$class-type}desk-only {
   display: none;
   @media #{$medium-up} {
     display: initial;
   }
+  &.flexbox {
+    @media #{$medium-up} {
+      display: flex;
+    }
+  }
 }
-.large-only {
+#{$class-type}large-only {
   @media #{$medium-max}{
     display: none;
   }
 }
 
-.sr-only {
+#{$class-type}sr-only {
   position: absolute;
   width: 1px;
   height: 1px;

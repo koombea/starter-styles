@@ -27,9 +27,14 @@
 @import "core/flexgrid";
 
 //modules, the real css that you write everyday based on the design
-// @import "modules/your-module";
+@import "modules/layout";
+@import "modules/flexgrid";
 
 // Helpers
 @import "helpers/font-helpers";
 @import "helpers/space-helpers";
+@import "helpers/spacing-helpers";
 @import "helpers/visibility-helpers";
+
+// Extended Helpers
+@import "modules/helpers";

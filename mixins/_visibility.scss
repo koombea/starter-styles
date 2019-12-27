@@ -1,14 +1,16 @@
+$class-type: if($use-silent-classes, unquote("%"), unquote("."));
+
 // Mixin to run inside of for loop - creates visibility classes * Not for developer use *
 @mixin vis-factory($thisPrefix) {
-  .#{$thisPrefix}--show {
+  #{$class-type}#{$thisPrefix}--show {
     display: block;
   }
-  .flexgrid.#{$thisPrefix}--show {
+  #{$class-type}flexgrid#{$class-type}#{$thisPrefix}--show {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
-  .#{$thisPrefix}--hide {
+  #{$class-type}#{$thisPrefix}--hide {
     display: none;
   }
 }

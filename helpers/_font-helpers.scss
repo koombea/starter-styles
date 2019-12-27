@@ -1,48 +1,50 @@
+$class-type: if($use-silent-classes, unquote("%"), unquote("."));
+
 // Font Helpers
 //===================
 
 // Font weights
-.weight--light        { font-weight: 300; }
+#{$class-type}weight--light        { font-weight: 300; }
 
-.face-regular,
-.regular,
-.weight--normal       { font-weight: 400; }
+#{$class-type}face-regular,
+#{$class-type}regular,
+#{$class-type}weight--normal       { font-weight: 400; }
 
-.face-semi,
-.semibold,
-.weight--semibold     { font-weight: 600; }
+#{$class-type}face-semi,
+#{$class-type}semibold,
+#{$class-type}weight--semibold     { font-weight: 600; }
 
-.face-bold,
-.bold,
-.weight--bold         { font-weight: 700; }
+#{$class-type}face-bold,
+#{$class-type}bold,
+#{$class-type}weight--bold         { font-weight: 700; }
 
 // Font styles
-.style--normal        { font-style: normal; }
+#{$class-type}style--normal        { font-style: normal; }
 
-.border--none         { border: 0; }
+#{$class-type}border--none         { border: 0; }
 
 // refactor // was inside from transparency core helpers
-.word-break {
+#{$class-type}word-break {
   word-break: break-all;
   word-wrap: break-word;
 }
 
-.uppercase {
+#{$class-type}uppercase {
   text-transform: uppercase;
 }
 
-.lowercase {
+#{$class-type}lowercase {
   text-transform: lowercase;
 }
 
-.capitalize {
+#{$class-type}capitalize {
   text-transform: capitalize;
 }
 
-.underline {
+#{$class-type}underline {
   text-decoration: underline;
 }
 
-.underline--none {
+#{$class-type}underline--none {
   text-decoration: none !important;
 }

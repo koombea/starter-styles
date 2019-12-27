@@ -1,4 +1,5 @@
-.container{
+$class-type: if($use-silent-classes, unquote("%"), unquote("."));
+#{$class-type}container{
   @include rem(1190, 'max-width');
   margin: 0 auto;
   position: relative;

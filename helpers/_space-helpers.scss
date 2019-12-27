@@ -1,37 +1,61 @@
-.vertical-align--middle {
+$class-type: if($use-silent-classes, unquote("%"), unquote("."));
+
+#{$class-type}flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#{$class-type}grid {
+  @include rem(25, 'column-gap');
+  @include rem(40, 'row-gap');
+  display: grid;
+  @media #{$small-up} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media #{$medium-up} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+#{$class-type}vertical-align--middle {
   vertical-align: middle;
 }
 
-.vertical-align--bottom {
+#{$class-type}vertical-align--bottom {
   vertical-align: bottom;
 }
 
-.vertical-align--top {
+#{$class-type}vertical-align--top {
   vertical-align: top;
 }
 
-.align-items {
+#{$class-type}align-items {
   align-items: center;
 }
 
-.align--start {
+#{$class-type}align--start {
   align-self: flex-start;
 }
-.align--end {
+#{$class-type}align--end {
   align-self: flex-end;
 }
-.horizontal-align--center {
+#{$class-type}horizontal-align--center {
   justify-content: center;
 }
-.justify-content--left {
-  justify-content: left;
+#{$class-type}justify-content--left {
+  justify-content: flex-start;
+}
+
+#{$class-type}justify-content--right {
+  justify-content: flex-end;
 }
 // width helpers
-.full-width {
+#{$class-type}full-width {
   width: 100%;
 }
 
-.full-width--small-only {
+#{$class-type}full-width--small-only {
   @media #{$medium-max}{
     width: 100%;
   }
@@ -40,29 +64,23 @@
 // Mute an object by reducing its opacity.
 //===================
 
-.muted{
+#{$class-type}muted{
   @include opacity(0.5);
 }
 
-.overflow-x {
+#{$class-type}overflow-x {
   overflow-x: auto;
 }
 
-.overflow-x--hidden {
+#{$class-type}overflow-x--hidden {
   overflow-x: hidden;
 }
 
-.relative{
+#{$class-type}relative{
   position: relative;
 }
 
-.flexbox {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.margin-auto {
+#{$class-type}margin-auto {
   margin: auto;
 }
 
@@ -70,14 +88,14 @@
 //===================
 
 // Text alignment
-.text-start {
+#{$class-type}text-start {
   text-align: $start;
 }
 
-.text-end {
+#{$class-type}text-end {
   text-align: $end;
 }
 
-.text-center {
+#{$class-type}text-center {
   text-align: center;
 }

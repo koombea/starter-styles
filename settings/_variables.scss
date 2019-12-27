@@ -25,7 +25,7 @@ $headings-letter-spacing:           0;
 $headings-color:                    inherit;
 
 // Grid
-// $use-silent-classes:  true!default;
+$use-silent-classes:  true!default;
 $grid-columns: 12 !default; // Set number of columns in the grid
 
 $xs-max: 40rem !default; // Set xs breakpoint's max width

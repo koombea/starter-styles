@@ -1,3 +1,4 @@
+$class-type: if($use-silent-classes, unquote("%"), unquote("."));
 * {
   @include box-sizing(border-box);
   &:before,
@@ -8,14 +9,14 @@
 
 // Body reset
 
-html {
+#{$class-type}html {
   font-size: em($font-size-base, 16);
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-font-smoothing: antialiased;
   height: 100%;
 }
 
-body {
+#{$class-type}body {
   background-size: 100%;
   font-family: $font-family-base;
   font-weight: $font-weight-base;
@@ -37,7 +38,7 @@ textarea {
 
 // Links
 
-a {
+#{$class-type}a {
   color: $link-color;
   text-decoration: none;
   transition: all .2s ease;
@@ -53,17 +54,17 @@ a {
   }
 }
 
-figure {
+#{$class-type}figure {
   margin: 0;
 }
 
-img {
+#{$class-type}img {
   max-width: 100%;
 }
 
 // Horizontal rules
 
-.hr {
+#{$class-type}hr {
   margin-top:    $line-height-computed;
   margin-bottom: $line-height-computed;
   border: 0;
